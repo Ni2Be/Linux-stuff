@@ -1,0 +1,194 @@
+    Aerary
+    Air shower
+    Aircraft cabin
+    Airport lounge
+    Aisle
+    Alcove
+    Almonry
+    Anatomical theatre
+    Andron
+    Anechoic chamber
+    Antechamber
+    Apodyterium
+    Arizona room
+    Assembly hall
+    Atrium
+    Attic
+    Attic style
+    Auditorium
+    Aula regia
+    Ballroom
+    Bang
+    Banishment room
+    Basement
+    Bathroom
+    Family room
+    Bedroom
+    Billiard room
+    Bonus room
+    Boudoir
+    Breezeway
+    Buttery
+    Cabin
+    Cabinet
+    Cafeteria
+    Caldarium
+    Calefactory
+    Castle chapel
+    Central apparatus room
+    Changing room
+    Chashitsu
+    Church hall
+    Church porch
+    Classroom
+    Cleanroom
+    Cloakroom
+    Closet
+    Committee room
+    Common room
+    Companionway
+    Computer lab
+    Conference hall
+    Control room
+    Conversation pit
+    Corner office
+    Count room
+    Counting house
+    Courtroom
+    Cry room
+    Cryptoporticus
+    Cyzicene hall
+    Darbazi
+    Darkroom
+    Den
+    Dining room
+    Dirty kitchen
+    Drawing room
+    Dungeon
+    Electrical room
+    Entryway
+    Equatorial room
+    Equipment room
+    Execution chamber
+    Fainting room
+    Fallout shelter
+    First aid room
+    Frigidarium
+    Function hall
+    Furnace room
+    Garage
+    Garden office
+    Garret
+    Genkan
+    Ghorfa
+    Great chamber
+    Great hall
+    Great room
+    Green room
+    Hall
+    Home cinema
+    Inglenook
+    Jack and Jill bathroom
+    Kitchen
+    Laconicum
+    Lactation room
+    Larder
+    Laundry room
+    Living room
+    Lobby
+    Loft
+    Long gallery
+    Lumber room
+    Luxury box
+    Maashaus
+    Mail services center
+    Mailroom
+    Majlis
+    Man cave
+    Master control
+    Mechanical floor
+    Mechanical room
+    Megaron
+    Mehmaan khana
+    Mission control center
+    Mizuya
+    Monastic cell
+    Music rehearsal space
+    Network operations center
+    Nilavara
+    Room number
+    Nursery
+    Office
+    Opisthodomos
+    Padded cell
+    Pantry
+    Parlour
+    Petit appartement du roi
+    Petit appartement de la reine
+    Pinacotheca
+    Porters' lodge
+    Presidential suite
+    Priest hole
+    Print room
+    Prison cell
+    Psychomanteum
+    Public toilet
+    Queue area
+    Rain porch
+    Recreation room
+    Refectory
+    Refreshment room
+    Reredorter
+    Riding hall
+    Roomsharing
+    Root cellar
+    Rotting room
+    Rotunda
+    Sacristy
+    Safe room
+    Sauna
+    Screened porch
+    Secret passage
+    Semi-basement
+    Sensitive Compartmented Information Facility
+    Servants' hall
+    Servants' quarters
+    Server room
+    Shoin
+    Showroom
+    Sky lobby
+    Skyway
+    Sleeping porch
+    Slype
+    Small office
+    Smoking room
+    Solar
+    Spear closet
+    Staffroom
+    Staircase tower
+    State room
+    Still room
+    Storm cellar
+    Student lounge
+    Studio
+    Study
+    Sudatorium
+    Suite
+    Sunroom
+    Tabagie
+    Tablinum
+    Tearoom
+    Tepidarium
+    Throne room
+    Toolroom
+    Torture chamber
+    Transmission control room
+    Triclinium
+    Undercroft
+    Unisex public toilet
+    Utility room
+    Utility vault
+    Vestibule
+    Vestry
+    Void deck
+    Waiting room

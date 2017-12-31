@@ -1,13 +1,13 @@
 #include <iostream>
 #include <wiringPi.h>
-
 #include <stdio.h>
 
 int main()
 {
-    if (wiringPiSetup() == -1)
-        return 1;
-
+	if (wiringPiSetup() == -1)
+	{
+		return 1;
+	}
 	//GPIO 15 == WPin 16
 	//GPIO 17 == WPin 0
 	//GPIO 18 == WPin 1

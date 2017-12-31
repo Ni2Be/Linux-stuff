@@ -43,5 +43,5 @@ int main()
 		}
 
 		std::cout << "quit type: q\n";
-	} while (ch != 'q')
+	} while (ch != 'q');
 }

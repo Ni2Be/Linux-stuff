@@ -28,18 +28,22 @@ int main()
 		std::cin >> delay_time;
 		for (int i = 0; i < rotations; i++)
 		{
-			digitalWrite(16, 1);
+			if (i == 0)
+			{digitalWrite(16, 1);}
 			delay(delay_time);
-			digitalWrite(16, 0);
 			digitalWrite(0, 1);
+			digitalWrite(16, 0);
 			delay(delay_time);
-			digitalWrite(0, 0);
 			digitalWrite(1, 1);
+			digitalWrite(0, 0);
 			delay(delay_time);
-			digitalWrite(1, 0);
 			digitalWrite(2, 1);
+			digitalWrite(1, 0);
 			delay(delay_time);
+			digitalWrite(16, 1);
 			digitalWrite(2, 0);
+			if (i == rotations - 1)
+			{digitalWrite(16, 0);}
 		}
 
 		std::cout << "quit type: q\n"; 

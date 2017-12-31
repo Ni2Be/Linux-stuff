@@ -42,6 +42,7 @@ int main()
 			digitalWrite(2, 0);
 		}
 
-		std::cout << "quit type: q\n";
+		std::cout << "quit type: q\n"; 
+		std::cin >> ch;
 	} while (ch != 'q');
 }

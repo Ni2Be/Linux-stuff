@@ -37,7 +37,7 @@ int main()
 		std::cin >> delay_time;
 
 
-		//full rotation 32*64=2048 steps
+		//full rotation 8*64=512 steps
 		if (rotations > 0) { gpioWrite(15, 1); }  /* on */
 		for (int i = 0; i < rotations; i++)
 		{

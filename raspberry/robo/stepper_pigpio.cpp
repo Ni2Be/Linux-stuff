@@ -53,7 +53,6 @@ int main()
 			time_sleep(delay_time);
 			gpioWrite(15, 1); /* on */
 			gpioWrite(27, 0); /* off */
-			time_sleep(delay_time);
 		}
 		if (gpioRead(15) == 1) { gpioWrite(15, 0); } /* off */
 

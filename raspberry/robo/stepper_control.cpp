@@ -48,7 +48,7 @@ public:
 
 	void rotate(double angle, Speed speed = FAST)
 	{
-		double delay_time = 0.002; //FAST
+		double delay_time = 0.0025; //FAST
 		if (speed == SLOW)
 		{
 			delay_time = 0.005;
@@ -58,7 +58,8 @@ public:
 		//full rotation 32*64=2048 steps
 		int steps = (abs(angle) / 360) * 2048;
 
-
+		//TODO save left right to member
+		//TODO handle negative angles
 		int left = 0, right = 1;
 		for (int i = 0; i < steps; i++)
 		{

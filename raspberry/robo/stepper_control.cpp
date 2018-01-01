@@ -14,33 +14,6 @@ sudo ./stepper_pigpio
 #include <vector>
 #include <math.h>
 
-class Stepper;
-
-int main()
-{
-	if (gpioInitialise() < 0)
-	{
-		fprintf(stderr, "pigpio initialisation failed\n");
-		return 1;
-	}
-	Stepper stepper(15, 17, 18, 27);
-
-	char ch = 'a';
-	double angle = 0;
-	do
-	{
-		std::cout << "angle: \n";
-		std::cin >> angle;
-	
-		stepper.rotate(angle);
-
-		std::cout << "quit type: q\n";
-		std::cin >> ch;
-	} while (ch != 'q');
-
-
-	return 0;
-}
 
 
 class Stepper
@@ -66,7 +39,7 @@ public:
 		gpioSetMode(pins[2], PI_OUTPUT);
 		gpioSetMode(pins[3], PI_OUTPUT);
 	}
-	
+
 	~Stepper()
 	{
 		/* Stop DMA, release resources */
@@ -112,3 +85,31 @@ private:
 	int m_left;
 	int m_right;
 };
+
+
+
+int main()
+{
+	if (gpioInitialise() < 0)
+	{
+		fprintf(stderr, "pigpio initialisation failed\n");
+		return 1;
+	}
+	Stepper stepper(15, 17, 18, 27);
+
+	char ch = 'a';
+	double angle = 0;
+	do
+	{
+		std::cout << "angle: \n";
+		std::cin >> angle;
+	
+		stepper.rotate(angle);
+
+		std::cout << "quit type: q\n";
+		std::cin >> ch;
+	} while (ch != 'q');
+
+
+	return 0;
+}

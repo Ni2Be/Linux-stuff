@@ -62,7 +62,7 @@ public:
 		int left = 0, right = 1;
 		for (int i = 0; i < steps; i++)
 		{
-			gpioWrite(pins[rigth++], 1); /* on */
+			gpioWrite(pins[right++], 1); /* on */
 			gpioWrite(pins[left++], 0); /* off */
 			if (right == 4)
 				right = 0;

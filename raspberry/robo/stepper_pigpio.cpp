@@ -55,7 +55,7 @@ int main()
 			gpioWrite(27, 0); /* off */
 			time_sleep(delay_time);
 		}
-		if (gpioRead(15) == 1) { digitalWrite(15, 0); } /* off */
+		if (gpioRead(15) == 1) { gpioWrite(15, 0); } /* off */
 
 		std::cout << "quit type: q\n";
 		std::cin >> ch;

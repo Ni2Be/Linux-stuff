@@ -1,8 +1,10 @@
+//TODO save left right to member
+//TODO handle negative angles
 
 /*
 stepper_pigpio.cpp
 
-gcc -o stepper_pigpio stepper_pigpio.cpp -lpigpio -lrt -lpthread -lstdc++
+gcc -o stepper stepper_control.cpp -lpigpio -lrt -lpthread -lstdc++
 
 sudo ./stepper_pigpio
 */
@@ -58,8 +60,6 @@ public:
 		//full rotation 32*64=2048 steps
 		int steps = (abs(angle) / 360) * 2048;
 
-		//TODO save left right to member
-		//TODO handle negative angles
 		int left = 0, right = 1;
 		for (int i = 0; i < steps; i++)
 		{

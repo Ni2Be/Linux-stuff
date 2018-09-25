@@ -96,7 +96,7 @@ int main()
 		fprintf(stderr, "pigpio initialisation failed\n");
 		return 1;
 	}
-	Stepper stepper(15, 17, 18, 27);
+	Stepper stepper(9, 25, 11, 8);
 
 	char ch = 'a';
 	double angle = 0;
@@ -104,8 +104,8 @@ int main()
 	{
 		std::cout << "angle: \n";
 		std::cin >> angle;
-	
-		stepper.rotate(angle);
+
+		stepper.rotate(angle, Stepper::SLOW);
 
 		std::cout << "quit type: q\n";
 		std::cin >> ch;

@@ -14,6 +14,7 @@ Water_Replenishment::Water_Replenishment(std::chrono::system_clock::time_point d
 
 void Water_Replenishment::start()
 {
+    std::cout << "started!\n";
     if (sensor_1.is_wet() || sensor_2.is_wet())
     {
         std::cout << "is_wet\n";

@@ -3,7 +3,9 @@
 
 int main()
 {
-    Water_Replenishment(std::chrono::system_clock::now(), 200);
+    Water_Replenishment replenisher(std::chrono::system_clock::now(), 200);
+
+    replenisher.start();
 
     std::cout << "end\n";
     

@@ -22,7 +22,7 @@ food_control: food_control.cpp food_control.h
 	$(CXX) -c $(CXXFLAGS) -o food_control.o food_control.cpp
 
 
-food_test: water_replenishment.o water_control_test.cpp
+water_control_test: water_replenishment.o water_control_test.cpp
 	$(CXX) $(CXXFLAGS) -o water_control_test water_replenishment.o water_control_test.cpp
 
 water_replenishment: water_sensor.o pump_control.o water_replenishment.cpp water_replenishment.h

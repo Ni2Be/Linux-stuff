@@ -35,7 +35,10 @@ bool Water_Sensor::is_wet()
 	bool wet = false;
 	gpioWrite(m_output_pin, 1); /* on */
 	if(gpioRead(m_input_pin) == 1)
+	{
+		std::cout << gpioRead(m_input_pin) << " is wet!\n";
 		wet = true;
+	}
 	gpioWrite(m_output_pin, 0); /* off */
 	return wet;
 }

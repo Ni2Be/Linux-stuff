@@ -21,5 +21,21 @@ food_test: food_control.o food_test.cpp
 food_control: food_control.cpp food_control.h
 	$(CXX) -c $(CXXFLAGS) -o food_control.o food_control.cpp
 
+
+food_test: water_replenishment.o water_control_test.cpp
+	$(CXX) $(CXXFLAGS) -o water_control_test water_replenishment.o water_control_test.cpp
+
+water_replenishment: water_sensor.o pump_control.o water_replenishment.cpp water_replenishment.h
+	$(CXX) -c $(CXXFLAGS) -o water_replenishment.o water_sensor.o pump_control.o water_replenishment.cpp
+
+
+water_sensor: water_sensor.cpp water_sensor.h
+	$(CXX) -c $(CXXFLAGS) -o water_sensor.o water_sensor.cpp
+
+
+pump_control: pump_control.cpp pump_control.h
+	$(CXX) -c $(CXXFLAGS) -o pump_control.o pump_control.cpp
+
+
 clean:
-	$(RM) thermo_test thermometer.o stepper_test stepper_control.o food_control.o food_test
+	$(RM) thermo_test thermometer.o stepper_test stepper_control.o food_control.o food_test water_sensor.o water_sensor pump_control.o pump_control water_replenishment.o water_replenishment water_control_test 

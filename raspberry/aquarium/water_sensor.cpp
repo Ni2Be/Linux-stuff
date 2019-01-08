@@ -23,7 +23,7 @@ Water_Sensor::Water_Sensor(int input_pin, int output_pin)
 	gpioSetMode(output_pin, PI_OUTPUT);
 }
 
-Food_Control::~Food_Control()
+Water_Sensor::~Water_Sensor()
 {
     /* Stop DMA, release resources */
     gpioTerminate();

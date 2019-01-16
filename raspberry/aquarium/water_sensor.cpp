@@ -20,6 +20,7 @@ Water_Sensor::Water_Sensor(int input_pin, int output_pin)
 
     /* Set GPIO modes */
     gpioSetMode(input_pin, PI_INPUT);
+	gpioSetPullUpDown(input_pin, PI_PUD_DOWN);
 	gpioSetMode(output_pin, PI_OUTPUT);
 }
 

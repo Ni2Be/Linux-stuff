@@ -9,13 +9,11 @@
 class Water_Replenishment
 {
 public:
-        Water_Replenishment(std::chrono::system_clock::time_point daytime, int milliliter);
+        Water_Replenishment(int milliliter);
 
-        std::chrono::system_clock::time_point m_daytime;
         int m_milliliter;
         
-        void start();
-
+        void check_and_pump();
 private:
     Pump pump;
     Water_Sensor sensor_1;

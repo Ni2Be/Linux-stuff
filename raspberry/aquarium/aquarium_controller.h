@@ -1,4 +1,7 @@
 #include "food_control.h"
+#include "stepper_control.h"
+#include "water_replenishment.h"
+#include "thermometer.h"
 
 class Aquarium_Controller
 {
@@ -9,7 +12,9 @@ public:
     void start();
 private:
     Food_Control food_control;
-
+    Stepper stepper;
+    Water_Replenishment replenisher;
+	NB_Sensors::Thermometer_DS18B20 thermometer;
 
     void start_moonrise();
     void start_moonset();
@@ -19,4 +24,4 @@ private:
     void log_temperature();
 
     void start_feeding();
-}
+};

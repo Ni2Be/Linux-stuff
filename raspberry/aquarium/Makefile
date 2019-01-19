@@ -5,7 +5,7 @@ RM=rm -f
 
 #MAIN
 aquarium_main: aquarium_controller.o main.cpp
-	$(CXX) -c $(CXXFLAGS) -o aquarium_main aquarium_controller.o food_control.o thermometer.o stepper_control.o pump_control.o water_sensor.o water_replenishment.o main.cpp
+	$(CXX) $(CXXFLAGS) -o aquarium_main aquarium_controller.o food_control.o thermometer.o stepper_control.o pump_control.o water_sensor.o water_replenishment.o main.cpp
 
 #CONTROLLER
 aquarium_controller.o: aquarium_controller.cpp aquarium_controller.h

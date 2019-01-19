@@ -77,12 +77,14 @@ std::chrono::system_clock::time_point Date::to_time()
 
 std::string Date::time_to_string(std::chrono::system_clock::time_point date)
 {
-	struct tm buf;
-	char dateString[26];
+	//struct tm* buf;
+	//char dateString[26];
 	time_t time = std::chrono::system_clock::to_time_t(date);
-	localtime_s(&buf, &time);
-	asctime_s(dateString, 26, &buf);
-	return dateString;
+	//buf = localtime(&time);
+	//localtime_s(&buf, &time);
+	//asctime_s(dateString, 26, &buf);
+	return asctime(localtime(&time));
+;
 }
 
 void Date::change_year(std::string& date, int year)

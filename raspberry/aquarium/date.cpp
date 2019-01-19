@@ -1,5 +1,6 @@
 #include "date.h"
-
+#include <time.h>
+#include <cmath>
 
 Date::Date()
 {
@@ -96,7 +97,7 @@ void Date::change_month(std::string& date, int month)
 
 void Date::change_day(std::string& date, int day)
 {
-	if (log10(day) < 1)
+	if (std::log10(day) < 1)
 		date.replace(8, 2, " " + std::to_string(day));
 	else
 		date.replace(8, 2, std::to_string(day));
@@ -104,7 +105,7 @@ void Date::change_day(std::string& date, int day)
 
 void Date::change_hour(std::string& date, int hour)
 {
-	if (log10(hour) < 1)
+	if (std::log10(hour) < 1)
 		date.replace(11, 2, "0" + std::to_string(hour));
 	else
 		date.replace(11, 2, std::to_string(hour));
@@ -112,7 +113,7 @@ void Date::change_hour(std::string& date, int hour)
 
 void Date::change_minute(std::string& date, int minute)
 {
-	if (log10(minute) < 1)
+	if (std::log10(minute) < 1)
 		date.replace(14, 2, "0" + std::to_string(minute));
 	else
 		date.replace(14, 2, std::to_string(minute));
@@ -120,7 +121,7 @@ void Date::change_minute(std::string& date, int minute)
 
 void Date::change_second(std::string& date, int second)
 {
-	if (log10(second) < 1)
+	if (std::log10(second) < 1)
 		date.replace(17, 2, "0" + std::to_string(second));
 	else
 		date.replace(17, 2, std::to_string(second));

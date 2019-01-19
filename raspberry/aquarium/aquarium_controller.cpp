@@ -92,7 +92,7 @@ void Aquarium_Controller::start()
         plan_today.set_hour(21);
         plan_today.set_minute(0);
         plan_today.set_second(0);
-        Date time_now(std::chrono::system_clock::now());
+        time_now = Date(std::chrono::system_clock::now());
         if (time_now.hour() < plan_today.hour())
         {
             //wait for moonrise
@@ -105,7 +105,7 @@ void Aquarium_Controller::start()
         plan_today.set_minute(1);
         plan_today.set_second(0);
         plan_today.add_day(1);
-        Date time_now(std::chrono::system_clock::now());
+        time_now = Date(std::chrono::system_clock::now());
         if (time_now.hour() < plan_today.hour())
         {
             //wait for tomorrow

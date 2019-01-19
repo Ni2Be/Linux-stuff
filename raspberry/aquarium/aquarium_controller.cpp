@@ -44,7 +44,7 @@ void Aquarium_Controller::start()
         plan_today.set_minute(0);
         plan_today.set_second(0);
         Date time_now(std::chrono::system_clock::now());
-        if (time_now.hour < plan_today.hour)
+        if (time_now.hour() < plan_today.hour())
         {
             //wait for moonset
             std::this_thread::sleep_until(plan_today.get_time_point());
@@ -56,7 +56,7 @@ void Aquarium_Controller::start()
         plan_today.set_minute(0);
         plan_today.set_second(0);
         time_now = Date(std::chrono::system_clock::now());
-        if (time_now.hour < plan_today.hour)
+        if (time_now.hour() < plan_today.hour())
         {
             //wait for Water Replenishment
             std::this_thread::sleep_until(plan_today.get_time_point());
@@ -68,7 +68,7 @@ void Aquarium_Controller::start()
         plan_today.set_minute(0);
         plan_today.set_second(0);
         time_now = Date(std::chrono::system_clock::now());
-        if (time_now.hour < plan_today.hour)
+        if (time_now.hour() < plan_today.hour())
         {
             //wait for Feeding
             std::this_thread::sleep_until(plan_today.get_time_point());
@@ -80,7 +80,7 @@ void Aquarium_Controller::start()
         plan_today.set_minute(0);
         plan_today.set_second(0);
         time_now = Date(std::chrono::system_clock::now());
-        if (time_now.hour < plan_today.hour)
+        if (time_now.hour() < plan_today.hour())
         {
             //wait for Water Replenishment
             std::this_thread::sleep_until(plan_today.get_time_point());
@@ -93,7 +93,7 @@ void Aquarium_Controller::start()
         plan_today.set_minute(0);
         plan_today.set_second(0);
         Date time_now(std::chrono::system_clock::now());
-        if (time_now.hour < plan_today.hour)
+        if (time_now.hour() < plan_today.hour())
         {
             //wait for moonrise
             std::this_thread::sleep_until(plan_today.get_time_point());
@@ -106,7 +106,7 @@ void Aquarium_Controller::start()
         plan_today.set_second(0);
         plan_today.add_day(1);
         Date time_now(std::chrono::system_clock::now());
-        if (time_now.hour < plan_today.hour)
+        if (time_now.hour() < plan_today.hour())
         {
             //wait for tomorrow
             std::this_thread::sleep_until(plan_today.get_time_point());

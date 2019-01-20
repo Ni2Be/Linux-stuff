@@ -25,7 +25,17 @@ Pump::Pump(int pin)
 
 Pump::~Pump()
 {
+    if (gpioInitialise() < 0)
+    {
+           std::cerr << "pigpio initialisation failed" << std::endl;
+	    exit(1);
+    }
+
+    /* Set GPIO mode */
+    gpioSetMode(m_pin, PI_OUTPUT);
     gpioWrite(m_pin, 0); /* off */
+
+
     /* Stop DMA, release resources */
     gpioTerminate();
 }

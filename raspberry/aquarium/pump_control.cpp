@@ -20,10 +20,12 @@ Pump::Pump(int pin)
 
     /* Set GPIO mode */
     gpioSetMode(m_pin, PI_OUTPUT);
+    gpioWrite(m_pin, 0); /* off */
 }
 
 Pump::~Pump()
 {
+    gpioWrite(m_pin, 0); /* off */
     /* Stop DMA, release resources */
     gpioTerminate();
 }

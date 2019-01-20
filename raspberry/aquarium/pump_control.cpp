@@ -20,8 +20,7 @@ Pump::Pump(int pin)
 
     /* Set GPIO mode */
     gpioSetMode(m_pin, PI_OUTPUT);
-	gpioSetPullUpDown(m_pin, PI_PUD_DOWN);
-    gpioWrite(m_pin, 0); /* off */
+	gpioWrite(m_pin, 0); /* off */
 }
 
 Pump::~Pump()

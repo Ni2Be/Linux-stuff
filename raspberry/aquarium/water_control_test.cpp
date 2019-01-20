@@ -11,6 +11,4 @@ int main()
     
     char ch;
     std::cin >> ch;
-
-    replenisher.check_and_pump();
 }

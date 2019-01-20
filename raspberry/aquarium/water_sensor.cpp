@@ -12,11 +12,11 @@ Water_Sensor::Water_Sensor(int input_pin, int output_pin)
     m_input_pin(input_pin),
 	m_output_pin(output_pin)
 {
-    if (gpioInitialise() < 0)
-    {
-        std::cerr << "pigpio initialisation failed" << std::endl;
-		exit(1);
-	}
+    // if (gpioInitialise() < 0)
+    // {
+    //     std::cerr << "pigpio initialisation failed" << std::endl;
+	// 	exit(1);
+	// }
 
     /* Set GPIO modes */
     gpioSetMode(input_pin, PI_INPUT);
@@ -27,7 +27,7 @@ Water_Sensor::Water_Sensor(int input_pin, int output_pin)
 Water_Sensor::~Water_Sensor()
 {
     /* Stop DMA, release resources */
-    gpioTerminate();
+    //gpioTerminate();
 }
 
 //

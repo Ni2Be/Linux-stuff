@@ -34,7 +34,7 @@ void Food_Control::rotate()
 {
 	gpioSetAlertFunc(m_input_pin, NULL);
 	gpioWrite(m_output_pin, 1); /* on */
-	double initial_wait = 2.0; //wait one secound so that the stop singnal doesn't triggers to early
+	double initial_wait = 2.0; //wait one second so that the stop singnal doesn't triggers to early
 	time_sleep(initial_wait);
 	gpioSetAlertFuncEx(m_input_pin, stop_rotation_cb, this);
 }

@@ -6,7 +6,7 @@ Water_Replenishment::Water_Replenishment(int milliliter)
     m_milliliter(milliliter),
     sensor_1(5, 6),
     sensor_2(12, 13),
-    pump(26)
+    pump(4)
 {
 
 }

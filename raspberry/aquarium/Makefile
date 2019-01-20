@@ -3,6 +3,10 @@ CXX=g++
 CXXFLAGS=-Wall -std=c++17 -pthread -lpigpio -lrt
 RM=rm -f
 
+#AQUARIUM
+aquarium: main.cpp aquarium_controller.cpp aquarium_controller.h
+	$(CXX) $(CXXFLAGS) -o aquarium main.cpp aquarium_controller.cpp date.cpp food_control.cpp stepper_control.cpp thermometer.cpp water_replenishment.cpp water_sensor.cpp pump_control.cpp
+
 #MAIN
 aquarium_main: aquarium_controller.o main.cpp
 	$(CXX) $(CXXFLAGS) -o aquarium_main aquarium_controller.o food_control.o thermometer.o stepper_control.o pump_control.o water_sensor.o water_replenishment.o main.cpp
@@ -12,21 +16,21 @@ aquarium_controller: date.o food_control.o thermometer.o stepper_control.o pump_
 	$(CXX) -c $(CXXFLAGS) -o aquarium_controller.o date.o food_control.o thermometer.o stepper_control.o pump_control.o water_sensor.o water_replenishment.o aquarium_controller.cpp
 
 #DATE
-date.o: date.cpp date.h
+date: date.cpp date.h
 	$(CXX) -c $(CXXFLAGS) -o date.o date.cpp
 
 #STEPPER MOON CONTROL
 stepper_test: stepper_control.o stepper_test.cpp
 	$(CXX) $(CXXFLAGS) -o stepper_test stepper_control.o stepper_test.cpp
 
-stepper_control.o: stepper_control.cpp stepper_control.h
+stepper_control: stepper_control.cpp stepper_control.h
 	$(CXX) -c  $(CXXFLAGS) -o stepper_control.o stepper_control.cpp
 
 #THERMOMETER
 thermo_test: thermometer.o thermo_test.cpp
 	$(CXX) $(CXXFLAGS) -o thermo_test thermometer.o thermo_test.cpp
 
-thermometer.o: thermometer.cpp thermometer.h
+thermometer: thermometer.cpp thermometer.h
 	$(CXX) -c $(CXXFLAGS) -o thermometer.o thermometer.cpp
 
 #FOOD CONTROL

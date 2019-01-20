@@ -17,7 +17,8 @@ void Water_Replenishment::check_and_pump()
     if (!sensor_1.is_wet() && !sensor_2.is_wet())
     {
         std::cout << "sensors not wet, start pumping\n";
-        pump.pump_for(std::chrono::milliseconds(1000));
+        //500ml/55s 1ml/0.11s
+        pump.pump_for(std::chrono::milliseconds(110 * m_milliliter));
     }
     else
     {

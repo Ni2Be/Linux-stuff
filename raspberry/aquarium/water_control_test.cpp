@@ -3,7 +3,7 @@
 
 int main()
 {
-    Water_Replenishment replenisher(200);
+    Water_Replenishment replenisher(500);
 
     replenisher.check_and_pump();
 

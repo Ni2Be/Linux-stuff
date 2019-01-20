@@ -20,7 +20,6 @@ Pump::Pump(int pin)
 
     /* Set GPIO mode */
     gpioSetMode(m_pin, PI_OUTPUT);
-	gpioWrite(m_pin, 0); /* off */
 }
 
 Pump::~Pump()
@@ -38,5 +37,7 @@ void Pump::pump_for(std::chrono::milliseconds duration)
     std::cout << "pump on\n";
     time_sleep(delay_time);
     std::cout << "pump off\n";
-    gpioWrite(m_pin, 0); /* off */
+    if(gpioWrite(m_pin, 0))
+        std::cout << "pin: " << m_pin << " off\n";
+    /* off */
 }

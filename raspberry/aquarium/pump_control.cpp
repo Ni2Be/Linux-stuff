@@ -12,20 +12,21 @@ Pump::Pump(int pin)
         :
         m_pin(pin)
 {
-    // if (gpioInitialise() < 0)
-    // {
-    //        std::cerr << "pigpio initialisation failed" << std::endl;
-	//     exit(1);
-    // }
+    if (gpioInitialise() < 0)
+    {
+        std::cerr << "pigpio initialisation failed" << std::endl;
+	    exit(1);
+    }
 
     /* Set GPIO mode */
+    std::cout << "pin: " << pin << ", output\n";
     gpioSetMode(pin, PI_OUTPUT);
 }
 
 Pump::~Pump()
 {
     /* Stop DMA, release resources */
-    //gpioTerminate();
+    gpioTerminate();
 }
 
 //
@@ -36,8 +37,9 @@ void Pump::pump_for(std::chrono::milliseconds duration)
 	gpioWrite(m_pin, 1); /* on */
     std::cout << "pump on\n";
     time_sleep(delay_time);
-    std::cout << "pump off\n";
-    if(gpioWrite(m_pin, 0))
+    if(gpioWrite(m_pin, 0)) /* off */
         std::cout << "pin: " << m_pin << " could not turn off\n";
-    /* off */
+    else
+        std::cout << "pin: " << m_pin << ", pump is off\n";
+
 }

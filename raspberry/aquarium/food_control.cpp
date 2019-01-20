@@ -12,7 +12,7 @@ Food_Control::Food_Control(int input_pin, int output_pin)
         m_input_pin(input_pin),
 	m_output_pin(output_pin)
 {
-        if (gpioInitialise() < 0)
+	if (gpioInitialise() < 0)
         {
                 std::cerr << "pigpio initialisation failed" << std::endl;
 		exit(1);

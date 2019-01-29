@@ -18,3 +18,4 @@ private:
 };
 
 static void stop_rotation_cb(int, int, uint32_t, void*);
+static void stop_rotation_timer_cb(void*);

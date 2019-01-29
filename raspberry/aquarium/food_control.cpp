@@ -48,9 +48,16 @@ void stop_rotation_cb(int gpio, int level, uint32_t tick, void* food_control)
 		static_cast<Food_Control*>(food_control)->stop_rotation();
 }
 
+static void stop_rotation_timer_cb(void* food_control)
+{
+	gpioSetTimerFuncEx(0, 20000, NULL, NULL);
+	static_cast<Food_Control*>(food_control)->stop_rotation();
+}
+
+
+
 void Food_Control::stop_rotation()
 {
 	gpioWrite(m_output_pin, 0); /* off */
-	gpioSetTimerFuncEx(0, 20000, NULL, NULL);
 }
 

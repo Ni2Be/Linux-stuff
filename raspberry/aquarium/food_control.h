@@ -10,7 +10,7 @@ public:
 
         //
         void rotate();
-	void stop_rotation();
+	static void stop_rotation();
 private:
         //holds the GPIO numbers
         int m_input_pin;

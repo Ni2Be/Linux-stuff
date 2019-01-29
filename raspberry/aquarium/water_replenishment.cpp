@@ -14,7 +14,9 @@ Water_Replenishment::Water_Replenishment(int milliliter)
 void Water_Replenishment::check_and_pump()
 {
     std::cout << "checking..\n";
-    if (sensor_1.is_wet() || sensor_2.is_wet())
+    bool is_wet_s1 = sensor_1.is_wet();
+    bool is_wet_s2 = sensor_2.is_wet(); 
+    if (is_wet_s2 || is_wet_s2)
     {
         std::cout << "at least one sensor is wet, doing nothing\n";
     }

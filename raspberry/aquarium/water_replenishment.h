@@ -17,6 +17,6 @@ public:
 private:
     Pump pump;
     Water_Sensor sensor_1;
-    Water_Sensor sensor_2;
+    //Water_Sensor sensor_2;
 };
 

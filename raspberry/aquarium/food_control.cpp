@@ -39,7 +39,7 @@ void Food_Control::rotate()
 	gpioSetAlertFuncEx(m_input_pin, stop_rotation_cb, this);
 
 	//
-	gpioSetTimerFuncEx(0, 20000, stop_rotation_cb, this);
+	gpioSetTimerFuncEx(0, 20000, stop_rotation_timer_cb, this);
 }
 
 void stop_rotation_cb(int gpio, int level, uint32_t tick, void* food_control)

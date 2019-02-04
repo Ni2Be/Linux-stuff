@@ -38,12 +38,14 @@ void Aquarium_Controller::start()
         */
 
         Date plan_today(std::chrono::system_clock::now());
+        std::cout << "New Day: " << plan_today.get_date_string();
         
         //7:00 MOONSET
         plan_today.set_hour(7);
         plan_today.set_minute(0);
         plan_today.set_second(0);
         Date time_now(std::chrono::system_clock::now());
+        std::cout << time_now.get_date_string();
         if (time_now.hour() < plan_today.hour())
         {
             //wait for moonset
@@ -61,6 +63,7 @@ void Aquarium_Controller::start()
         plan_today.set_minute(0);
         plan_today.set_second(0);
         time_now = Date(std::chrono::system_clock::now());
+        std::cout << time_now.get_date_string();
         if (time_now.hour() < plan_today.hour())
         {
             //wait for Water Replenishment
@@ -78,6 +81,7 @@ void Aquarium_Controller::start()
         plan_today.set_minute(0);
         plan_today.set_second(0);
         time_now = Date(std::chrono::system_clock::now());
+        std::cout << time_now.get_date_string();
         if (time_now.hour() < plan_today.hour())
         {
             //wait for Feeding
@@ -95,6 +99,7 @@ void Aquarium_Controller::start()
         plan_today.set_minute(0);
         plan_today.set_second(0);
         time_now = Date(std::chrono::system_clock::now());
+        std::cout << time_now.get_date_string();
         if (time_now.hour() < plan_today.hour())
         {
             //wait for Water Replenishment
@@ -113,6 +118,7 @@ void Aquarium_Controller::start()
         plan_today.set_minute(0);
         plan_today.set_second(0);
         time_now = Date(std::chrono::system_clock::now());
+        std::cout << time_now.get_date_string();
         if (time_now.hour() < plan_today.hour())
         {
             //wait for moonrise
@@ -131,44 +137,45 @@ void Aquarium_Controller::start()
         plan_today.set_second(0);
         plan_today.add_day(1);
         time_now = Date(std::chrono::system_clock::now());
-        
+        std::cout << time_now.get_date_string();
         std::cout << "waiting for tomorrow\n";
         //wait for tomorrow
         std::this_thread::sleep_until(plan_today.get_time_point());
+        
     }
 }
 
 void Aquarium_Controller::start_moonrise()
-{
-    std::cout << "moonrise\n";
+{ 
+    std::cout << Date(std::chrono::system_clock::now()).get_date_string() << " moonrise\n";
     stepper.rotate(2048, std::chrono::milliseconds(std::chrono::minutes(30)));
-    std::cout << "end moonrise\n";
+    std::cout << Date(std::chrono::system_clock::now()).get_date_string() << " end moonrise\n";
 }
 
 void Aquarium_Controller::start_moonset()
 {
-    std::cout << "moonset\n";
+    std::cout << Date(std::chrono::system_clock::now()).get_date_string() << " moonset\n";
     stepper.rotate(-2048, std::chrono::milliseconds(std::chrono::minutes(30)));
-    std::cout << "end moonset\n";
+    std::cout << Date(std::chrono::system_clock::now()).get_date_string() << " end moonset\n";
 }
 
 void Aquarium_Controller::start_water_replenishment()
 {
-    std::cout << "check and pump\n";
+    std::cout << Date(std::chrono::system_clock::now()).get_date_string() << " check and pump\n";
     replenisher.check_and_pump();
-    std::cout << "end check and pump\n";
+    std::cout <<Date(std::chrono::system_clock::now()).get_date_string() << " end check and pump\n";
 }
 
 void Aquarium_Controller::log_temperature()
 {
     //TODO
-    std::cout << "log temp\n";
+    std::cout << Date(std::chrono::system_clock::now()).get_date_string() << " log temp\n";
     std::cout << thermometer.get_temperature();
 }
 
 void Aquarium_Controller::start_feeding()
 {
-    std::cout << "feeding\n";
+    std::cout << Date(std::chrono::system_clock::now()).get_date_string() << " feeding\n";
 	food_control.rotate();
     std::cout << "end feeding\n";
 }

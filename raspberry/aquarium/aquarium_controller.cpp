@@ -112,7 +112,7 @@ void Aquarium_Controller::start()
 
         
         //21:00 MOONRISE
-        auto moonrise_time = today + 16h;
+        auto moonrise_time = today + 21h;
         time_now = system_clock::now();
         std::cout << time_now << "\n";
         if (time_now < moonrise_time)

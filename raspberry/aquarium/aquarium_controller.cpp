@@ -10,7 +10,7 @@ Aquarium_Controller::Aquarium_Controller()
     :
     food_control(19, 16),
     stepper(9, 25, 11, 8),
-    replenisher(500),
+    replenisher(200),
     thermometer("0217c1401cff")
 {
 }
